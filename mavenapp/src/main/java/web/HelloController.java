@@ -20,7 +20,7 @@ public class HelloController extends Controller {
 
 	@Override
 	public FullHttpResponse getResponse() throws InterruptedException {
-		//TimeUnit.SECONDS.sleep(10);
+		TimeUnit.SECONDS.sleep(10);
 		FullHttpResponse response = new DefaultFullHttpResponse(HTTP_1_1, OK, CONTENT.duplicate());
         response.headers().set(CONTENT_TYPE, "text/plain");
         response.headers().set(CONTENT_LENGTH, response.content().readableBytes());
